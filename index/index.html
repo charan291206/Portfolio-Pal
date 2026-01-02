@@ -16,27 +16,7 @@
         <a href="/logout" class="btn-secondary">Logout</a>
       </div>
     </header>
-    <script>
-      function deleteProject(projectId) {
-        if (confirm('Are you sure you want to delete this project? This action cannot be undone.')) {
-          fetch(`/api/project/${projectId}`, {
-            method: 'DELETE'
-          })
-          .then(response => {
-            if (response.ok) {
-              alert('Project deleted successfully!');
-              location.reload();
-            } else {
-              alert('Failed to delete project');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Error deleting project');
-          });
-        }
-      }
-    </script>
+
     <div class="projects-grid">
       <% if (projects.length === 0) { %>
         <p class="no-projects">No projects yet. <a href="/add-project">Add your first project!</a></p>
@@ -67,7 +47,6 @@
                 <% if (project.liveDemo) { %>
                   <a href="<%= project.liveDemo %>" target="_blank">Live Demo</a>
                 <% } %>
-                <button class="btn-delete" onclick="deleteProject(<%= project.id %>)">Delete</button>
               </div>
             </div>
           </div>
