@@ -65,7 +65,7 @@ app.use(session({
 // Middleware
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'index')]);
+app.set('views', [path.join(__dirname, 'views')]);
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
