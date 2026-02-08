@@ -44,12 +44,11 @@ View the active deployment on Render: [https://ds1-54t7.onrender.com/login](http
    ```
    npm start
    ```
-   (if defined in scripts).
 2. Open your browser and visit `http://localhost:3000` (or the configured port).
 3. Access the login page and use credentials to explore the app.
 
 ### Deployment
-- Deployed on Render.com for static and dynamic hosting. Ensure environment variables (if any) are set for production.
+- Deployed on Render.com for static and dynamic hosting. 
 
 ## Data Overview
 - **projects-data.json**: Contains data for student projects, such as titles, descriptions, and other details.
